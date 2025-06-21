@@ -34,7 +34,6 @@ This library provides shared functionality and models that are used across diffe
 ## 📁 Project Structure
 
 ```
-cocktails.common/
 src/
 └── Cocktails.Common/           # Main library project
     ├── Emails/                # Email-related models
