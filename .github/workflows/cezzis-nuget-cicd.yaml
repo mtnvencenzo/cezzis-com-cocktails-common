@@ -14,7 +14,7 @@ jobs:
   nuget-pack-and-push:
     uses: mtnvencenzo/workflows/.github/workflows/nuget-pack-and-push.yaml@main
     with:
-      working_directory: ''
+      working_directory: './'
       environment_name: prd
       allow_push: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main' }}
       dotnet_version: '9.x'
