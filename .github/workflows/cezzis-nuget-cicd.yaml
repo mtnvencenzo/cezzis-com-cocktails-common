@@ -3,10 +3,10 @@ name: cicd-cezzis-nuget
 on:
   pull_request:
     branches: [main]
-    paths: [cocktails.common/**, .github/workflows/cezzis-nuget-cicd.yaml]
+    paths: [src/**, test/**, .github/workflows/cezzis-nuget-cicd.yaml]
   push:
     branches: [main]
-    paths: [cocktails.common/**, .github/workflows/cezzis-nuget-cicd.yaml]
+    paths: [src/**, test/**, .github/workflows/cezzis-nuget-cicd.yaml]
 
   workflow_dispatch:
 
@@ -14,11 +14,11 @@ jobs:
   nuget-pack-and-push:
     uses: mtnvencenzo/workflows/.github/workflows/nuget-pack-and-push.yaml@main
     with:
-      working_directory: 'cocktails.common'
+      working_directory: './'
       environment_name: prd
       allow_push: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main' }}
       dotnet_version: '9.x'
-      nuget_file_path: './../Nuget.Config'
+      nuget_file_path: './Nuget.Config'
       github_nuget_feed_name: 'github-mtnvencenzo'
       github_nuget_feed_source: 'https://nuget.pkg.github.com/mtnvencenzo/index.json'
       project_path: './Cocktails.Common.sln'
