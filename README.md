@@ -62,36 +62,6 @@ dotnet build
 dotnet test
 ```
 
-### Testing
-The project uses:
-- xUnit for testing framework
-- FluentAssertions for assertions
-- Coverlet for code coverage
-
-## 📦 Publishing
-
-The package is published using GitHub Workflows:
-
-1. **Build Stage**: Compiles the library and runs tests
-2. **Package Stage**: Creates the NuGet package
-3. **Publish Stage**: Publishes to the NuGet feed
-4. **Tagging**: Creates Git tags for successful releases
-
-## 🔒 Security
-
-- XML documentation for all public APIs
-- Strong naming support
-- Code signing (if configured)
-- Input validation in models
-
-## 🤝 Contributing
-
-1. Create a feature branch
-2. Make your changes
-3. Add or update tests
-4. Submit a pull request
-5. Wait for approval and automated deployment
-
 ## 📄 License
 
 This project is proprietary software. All rights reserved. 
