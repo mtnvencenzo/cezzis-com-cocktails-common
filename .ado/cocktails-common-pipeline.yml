@@ -61,7 +61,7 @@ stages:
             workingDirectory: '$(System.DefaultWorkingDirectory)/cocktails.common'
             slnFilePath: 'Cocktails.Common.sln'
             projectFilePath: 'src/Cocktails.Common/Cocktails.Common.csproj'
-            nugetConfigPath: 'Nuget.Config'
+            nugetConfigPath: 'NuGet.Config'
             testsDirectoryPath: 'test'
             branchType: ${{ variables.branchType }}
             artifactName: '${{ variables.artifactName }}'
